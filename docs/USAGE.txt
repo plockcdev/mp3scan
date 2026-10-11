@@ -1,0 +1,20 @@
+mp3scanner scans the current directory and its subdirectories for M4A files.
+Choose a subcommand:
+
+    mp3scanner silence
+    mp3scanner silence --all
+    mp3scanner missing
+
+The silence command reports playback duration, trailing silence, status, file
+size, embedded title, and filename. By default it shows EMPTY and BROKEN rows;
+--all includes OK rows. It requires ffmpeg and ffprobe on PATH.
+
+The missing command compares local album tracks with MusicBrainz release
+tracklists. It requires ffprobe on PATH and an Internet connection. MusicBrainz
+requests use the mp3scanner project URL in the User-Agent and are rate limited.
+
+Show command options with:
+
+    mp3scanner --help
+    mp3scanner silence --help
+    mp3scanner missing --help
